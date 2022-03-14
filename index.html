@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- 
+Homework 02
+
+Acceptance criteria:
+  GIVEN I need to sample a potential employee's previous work
+  WHEN I load their portfolio
+  THEN I am presented with the developer's name, a recent photo or avatar, and links to sections about them, their work, and how to contact them
+  WHEN I click one of the links in the navigation
+  THEN the UI scrolls to the corresponding section
+  WHEN I click on the link to the section about their work
+  THEN the UI scrolls to a section with titled images of the developer's applications
+  WHEN I am presented with the developer's first application
+  THEN that application's image should be larger in size than the others
+  WHEN I click on the images of the applications
+  THEN I am taken to that deployed application
+  WHEN I resize the page or view the site on various screens and devices
+  THEN I am presented with a responsive layout that adapts to my viewport
+ -->
   <head>
     <title>Carol Tsai Portfolio</title>
     <meta charset="UTF-8" />
@@ -9,70 +27,53 @@
   </head>
 
   <body>
-      <header>
+      <header class="topbox">
           <h1>Carol Tsai</h1>
           <nav>
             <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Work</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Resources</a></li>
+              <li><a href="#aboutme">About</a></li>
+              <li><a href=".work">Work</a></li>
+              <li><a href=".contact">Contact</a></li>
             </ul>
           </nav>
       </header>
 
       <main>
-          <article class="aboutme">
+        <img class="headshot" src="./assets/images/headshot.jpeg" alt="Headshot of asian female wearing white sweater">
+
+          <article class="container" id="aboutme">
             <h2 class="heading">About Me</h2>
-            <p>
-            Hello, my  name is Carol Tsai. I was born and raised in Mission  Viejo, California but have
-            been living in Univercity City, Philadelphia for the last 8 mnonths. I studied Environmental
-            Sciences at UC Berkeley and graduated in 2020. After that I worked as a GIS contractor for
-            Apple Maps for over a year. Outside of work, my passion is college ministry. I currently help
-            mentor college students at UPenn through my church. I decided to take this bootcamp in order to
-            find job that is more compatible with co-vocational ministry.
-            </p>
+            <section class="right-block">
+              <p>
+                Hello, my  name is Carol Tsai. I was born and raised in Mission  Viejo, California but I moved to Philadelphia
+                in the summer of 2021. I studied Environmental
+                Sciences at UC Berkeley and graduated in 2020 with a minor in Geographic Information Systems (GIS). After that I worked as a GIS contractor for
+                Apple Maps for over a year. 
+                </p>
+                <p>
+                  I was first introduced to coding through some computer science classes I took in college. Although I
+                  initially only took these classes to learn a new skill on the side, it quickly became a new mindset that I
+                  gained for how to approach problems and find solutions. In my early career I began using some of my python
+                  knowledge to write simple automation scipts for my team. I saw that coding could have so many more applications
+                  and I wanted to learn more, so I decided to become a web developper. Here I would like to present some projects that I have worked 
+                  since the start of my new journey. 
+                </p>
+            </section>
+            
           </article>
 
-          <section class="work">
+          <section class="work container">
+            <h2>Work</h2>
+            <section class="projects">
+              <section class="project-card">
+              </section>
+            </section>
 
           </section>
 
-          <form>
-            <h1>Contact</h1>
-            <p>
-              Use the Chrome DevTools to inspect the elements. Try to force <code>:focus</code> state on some of them and look for CSS properties like <code>appearance</code>, <code>outline</code>, and <code>cursor</code>.
-            </p>
-            <p>
-              <label for="username">Name:</label>
-              <!-- This element has a CSS declaration of `cursor: text` -->
-              <input id="username" type="text" placeholder="First Last" />
-            </p>
-            <p>
-              <label  for="email">E-mail:</label>
-              <input id="email" type="text" placeholder="me@example.com" />
-            </p>
-            <p>
-              <label for="expertise">CSS level of expertise:</label>
-              <!-- This element has a CSS declaration of `appearance: menulist` -->
-              <select id="expertise">
-                <option>Beginner</option>
-                <option selected>Intermediate</option>
-                <option>Advanced</option>
-              </select>
-            </p>
-            <p>
-              <label for="comment">Comment:</label>
-              <textarea id="comment" placeholder="Great article!"></textarea>
-            </p>
-            <p>
-              <input class="checkbox" id="agreement" type="checkbox" />
-              <label for="agreement">I agree to share my e-mail address with The CSS Blog</label>
-            </p>
-            <p>
-              <!-- When this element is in a :focus state, the CSS `outline` property is applied -->
-              <button>Submit</button>
-            </p>
-          </form>
+          <section class="contact container">
+            <h2>Contact</h2>
+            
+          </section>
       </main>
   </body>
