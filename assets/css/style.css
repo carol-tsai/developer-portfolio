@@ -1,23 +1,7 @@
+/* Setting variables for colors that will be repeated throughout the webpage. */
 :root {
     --labelColor: rgb(115, 191, 214);
     --textColor: rgb(41, 68, 128);
-}
-
-header {
-  height: 90px;
-  width: 100%;
-  line-height: 60px;
-  background-color: rgb(87, 87, 87);
-  justify-content: space-between;
-  display: flex;
-  flex-direction: row;
-  padding: 20px;
-  color: var(--labelColor);
-}
-
-main {
-    padding: 15px;
-    background-color: rgb(232, 238, 240);
 }
 
 h1 {
@@ -33,8 +17,16 @@ h2 {
     padding-right: 20px;
 }
 
-nav {
-    text-align: right;
+header {
+  height: 90px;
+  width: 100%;
+  line-height: 60px;
+  background-color: rgb(87, 87, 87);
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  color: var(--labelColor);
 }
 
 li {
@@ -42,19 +34,31 @@ li {
     padding: 0px 20px;
 }
 
+main {
+    padding: 15px;
+    background-color: rgb(232, 238, 240);
+}
+
+nav {
+    text-align: right;
+}
+
 p {
     color: var(--textColor);
     padding-top: 10px;
 }
 
-.navbar {
-    text-decoration: none;
-    color: var(--labelColor);
+.contact {
+    color: var(--textColor);
+    padding: 20px;
+    font-weight: bold;
 }
 
-#github {
-    text-decoration: none;
-    color: var(--textColor);
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
 }
 
 .headshot {
@@ -68,16 +72,19 @@ p {
     margin-left: auto;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 20px;
+.label {
+    background-color: var(--labelColor);
+    color: var(--textColor);
+    position: relative;
+    top: -100px;
+    padding: 10px;
+    width: fit-content;
+    left: 20px;
 }
 
-.right-block {
-    width: 75%;
-    padding: 20px;
+.navbar {
+    text-decoration: none;
+    color: var(--labelColor);
 }
 
 .projects {
@@ -95,28 +102,19 @@ p {
 }
 
 .project-image {
-    border: 3px solid var(--labelColor);
+    border: 4px solid var(--labelColor);
     object-fit: cover;
     margin: 20px;
     width: 100%;
     max-height: 200px;
 }
 
-.contact {
-    color: var(--textColor);
+.right-block {
+    width: 75%;
     padding: 20px;
 }
 
-.label {
-    background-color: var(--labelColor);
-    color: var(--textColor);
-    position: relative;
-    top: -100px;
-    padding: 10px;
-    width: fit-content;
-    left: 20px;
-}
-
+/* The first project image will be larger than the others */
 #first-project {
     flex: 2 1 600px;
 }
@@ -126,7 +124,13 @@ p {
     min-width: 300px;
 }
 
+#github {
+    text-decoration: none;
+    color: var(--textColor);
+}
 
+/* When the screen gets below 840px, the headers for each of the sections will stack on top of the
+content in a column instead of being in a row. */
 @media screen and (max-width: 840px) {
     .container {
         flex-direction: column;
