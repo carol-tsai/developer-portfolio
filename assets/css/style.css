@@ -1,18 +1,23 @@
+:root {
+    --labelColor: rgb(115, 191, 214);
+    --textColor: rgb(19, 19, 116);
+}
+
 header {
   height: 80px;
   width: 100%;
   line-height: 60px;
-  background-color: #266150;
+  background-color: rgb(87, 87, 87);
   justify-content: space-between;
   display: flex;
   flex-direction: row;
   padding: 20px;
-  color: white;
+  color: var(--labelColor);
 }
 
 main {
     padding: 15px;
-    background-color: blanchedalmond;
+    background-color: rgb(232, 238, 240);
 }
 
 h1 {
@@ -21,10 +26,10 @@ h1 {
 
 h2 {
     font-size: 4rem;
-    color: rgb(19, 19, 116);
+    color: var(--textColor);
     width: 25%;
     text-align: right;
-    border-right: 3px solid rgb(19, 19, 116);
+    border-right: 3px solid var(--textColor);
     padding-right: 20px;
 }
 
@@ -38,12 +43,18 @@ li {
 }
 
 p {
-    padding: 10px;
+    color: var(--textColor);
+    padding-top: 10px;
 }
 
-a {
+.navbar {
     text-decoration: none;
     color: #FDF8F5;
+}
+
+#github {
+    text-decoration: none;
+    color: var(--textColor);
 }
 
 .headshot {
@@ -68,3 +79,48 @@ a {
     width: 75%;
     padding: 20px;
 }
+
+.projects {
+    width: 75%;
+    padding: 20px;
+}
+
+.project-image {
+    border: 3px solid var(--labelColor);
+    object-fit: contain;
+    width: 400px;
+}
+
+.contact {
+    color: var(--textColor);
+}
+
+.label {
+    background-color: var(--labelColor);
+    color: var(--textColor);
+    position: relative;
+    top: -80px;
+    padding: 10px;
+    width: fit-content;
+}
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+    header {
+      background: #772014;
+    }
+  }
+  
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+    nav {
+        background-color: #bb8588;
+    }
+}
+/* Small smartphones - image placeholders change color */
+
+@media screen and (max-width: 576px) {
+    .sample-img {
+      background-color: #8ac4ff;
+    }
+  } 
