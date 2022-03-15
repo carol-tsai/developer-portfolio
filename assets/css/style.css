@@ -1,10 +1,10 @@
 :root {
     --labelColor: rgb(115, 191, 214);
-    --textColor: rgb(19, 19, 116);
+    --textColor: rgb(41, 68, 128);
 }
 
 header {
-  height: 80px;
+  height: 90px;
   width: 100%;
   line-height: 60px;
   background-color: rgb(87, 87, 87);
@@ -21,11 +21,11 @@ main {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--textColor);
     width: 25%;
     text-align: right;
@@ -49,7 +49,7 @@ p {
 
 .navbar {
     text-decoration: none;
-    color: #FDF8F5;
+    color: var(--labelColor);
 }
 
 #github {
@@ -61,7 +61,7 @@ p {
     height: 200px;
     width: auto;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 2px solid var(--textColor);
     margin: 30px;
     display: block;
     margin-right: auto;
@@ -83,44 +83,57 @@ p {
 .projects {
     width: 75%;
     padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    top: -80px;
+    flex: 1 0 300px;
+    margin-left: 20px;
 }
 
 .project-image {
     border: 3px solid var(--labelColor);
-    object-fit: contain;
-    width: 400px;
+    object-fit: cover;
+    margin: 20px;
+    width: 100%;
+    max-height: 200px;
 }
 
 .contact {
     color: var(--textColor);
+    padding: 20px;
 }
 
 .label {
     background-color: var(--labelColor);
     color: var(--textColor);
     position: relative;
-    top: -80px;
+    top: -100px;
     padding: 10px;
     width: fit-content;
+    left: 20px;
 }
 
-/* Tablets - header changes color */
-@media screen and (max-width: 992px) {
-    header {
-      background: #772014;
+#first-project {
+    flex: 2 1 600px;
+}
+
+#first-project img {
+    max-height: 400px;
+    min-width: 300px;
+}
+
+
+@media screen and (max-width: 840px) {
+    .container {
+        flex-direction: column;
     }
-  }
-  
-/* Large smartphones - navbar changes color */
-@media screen and (max-width: 768px) {
-    nav {
-        background-color: #bb8588;
+    h2 {
+        width: max-content;
+        border-right: none;
+        border-bottom: 3px solid var(--textColor);
     }
 }
-/* Small smartphones - image placeholders change color */
-
-@media screen and (max-width: 576px) {
-    .sample-img {
-      background-color: #8ac4ff;
-    }
-  } 
