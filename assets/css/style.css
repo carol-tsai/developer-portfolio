@@ -4,6 +4,7 @@
     --textColor: rgb(41, 68, 128);
 }
 
+/* Element selectors */
 h1 {
     font-size: 3rem;
 }
@@ -46,8 +47,10 @@ nav {
 p {
     color: var(--textColor);
     padding-top: 10px;
+    line-height: 1.5;
 }
 
+/* class selectors */
 .contact {
     color: var(--textColor);
     padding: 20px;
@@ -114,6 +117,7 @@ p {
     padding: 20px;
 }
 
+/* id selectors */
 /* The first project image will be larger than the others */
 #first-project {
     flex: 2 1 600px;
@@ -129,6 +133,13 @@ p {
     color: var(--textColor);
 }
 
+/* pseudo classes */
+/* projects cards will have a sepia filter when you hover over them. */
+.project-card:hover {
+    filter: sepia(50%);
+}
+
+/* media queries */
 /* When the screen gets below 840px, the headers for each of the sections will stack on top of the
 content in a column instead of being in a row. */
 @media screen and (max-width: 840px) {
